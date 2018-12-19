@@ -26,8 +26,9 @@ public class Peer {
 
     }
 
-    void listen() {
-
+    void listen() throws SocketException {
+        DatagramSocket udpSocket = new DatagramSocket();
+        byte[] received = new byte[256];
     }
 
 }
