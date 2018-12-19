@@ -1,5 +1,6 @@
 package ClientServerModel;
 
+import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
@@ -13,8 +14,22 @@ public class Client extends Thread {
 
 
     public static void main(String[] args) {
-        String command = scanner.nextLine();
-        Socket socket = new Socket()
+        try {
+            Socket socket = new Socket(ip, portNum);
+            try {
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                PrintWriter printWriter = new PrintWriter(socket.getOutputStream());
+                System.out.println("connected");
+                String command = scanner.nextLine();
+                System.out.println(command);
+                printWriter.print(command);
+                printWriter.flush();
+            } catch (IOException e) {
+                System.out.println("Read or Write Problemً");
+            }
+        } catch (IOException e) {
+            System.out.println("Can't open Socket");
+        }
     }
 
 }

@@ -1,8 +1,6 @@
 package ClientServerModel;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.concurrent.ExecutorService;
@@ -22,7 +20,6 @@ public class Server {
                 System.out.println("client accepted!");
                 new ClientHandler(client).run();
             }
-
             System.out.print("done.\nClosing server ... ");
         } catch (IOException ex) {
             System.err.println(ex);
@@ -32,7 +29,27 @@ public class Server {
 
     private static void parse_commands(String command) {
         String[] parsedCommand = command.split(" ");
+        switch (parsedCommand[0]) {
+            case ("Add"):
 
+            case ("Subtract"):
+
+            case ("Divide"):
+
+            case ("Multiply"):
+
+            case ("Sin"):
+
+            case ("Cos"):
+
+            case ("Tan"):
+
+            case ("Cot"):
+
+
+            default:
+                System.out.println("Wrong Syntax");
+        }
     }
 
 }
@@ -49,21 +66,12 @@ class ClientHandler implements Runnable {
     @Override
     public void run() {
         try {
-            OutputStream out = client.getOutputStream();
-            InputStream in = client.getInputStream();
-            byte[] buffer = new byte[2048];
-            String[] messages = {"salam", "khubam!", "salamati!"};
-            for (String msg : messages) {
-                int read = in.read(buffer);
-                System.out.println("RECV: " + new String(buffer, 0, read));
-                out.write(msg.getBytes());
-                System.out.println("SENT: " + msg);
-                Thread.sleep(2000);
-            }
-            System.out.print("All messages sent.\nClosing client ... ");
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(client.getInputStream()));
+            PrintWriter printWriter = new PrintWriter(client.getOutputStream());
+            String command = bufferedReader.readLine();
+            System.out.println(command);
+
         } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
             try {
