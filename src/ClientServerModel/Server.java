@@ -86,4 +86,49 @@ class ClientHandler implements Runnable {
             }
         }
     }
+
+
+    private String parse_commands(String command) {
+        String[] parsedCommand = command.split(" ");
+        int op1 = Integer.parseInt(parsedCommand[1]);
+        int op2;
+        String result;
+        long startTime = System.nanoTime();
+        switch (parsedCommand[0]) {
+            case ("Add"):
+                op2 = Integer.parseInt(parsedCommand[2]);
+                result = Integer.toString((op1 + op2));
+                break;
+            case ("Subtract"):
+                op2 = Integer.parseInt(parsedCommand[2]);
+                result = Integer.toString((op1 - op2));
+                break;
+            case ("Divide"):
+                op2 = Integer.parseInt(parsedCommand[2]);
+                result = Double.toString((op1 * 1.0 / op2));
+                break;
+            case ("Multiply"):
+                op2 = Integer.parseInt(parsedCommand[2]);
+                result = Integer.toString((op1 * op2));
+                break;
+            case ("Sin"):
+                result = Double.toString(Math.sin(op1));
+                break;
+            case ("Cos"):
+                result = Double.toString(Math.cos(op1));
+                break;
+            case ("Tan"):
+                result = Double.toString(Math.tan(op1));
+                break;
+            case ("Cot"):
+                result = Double.toString(Math.tan(Math.PI / 2 - op1));
+                break;
+            default:
+                result = "Wrong Syntax";
+        }
+        long endTime = System.nanoTime();
+        long totalTIme = endTime - startTime;
+        return "Execution time in milliseconds : " +
+                totalTIme * 1.0 / 1000000 + " " + "Result = " + result;
+    }
 }
