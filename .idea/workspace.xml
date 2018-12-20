@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/ClientServerModel/Server.java" line="110" />
+    <bookmark url="file://$PROJECT_DIR$/src/ClientServerModel/Server.java" line="81" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c93ea836-fb5d-4d6b-a0e1-3f48f3016417" name="Default Changelist" comment="">
+    <list default="true" id="c93ea836-fb5d-4d6b-a0e1-3f48f3016417" name="Default Changelist" comment="Client Server Model Sending Receiving Messages Handled">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientServerModel/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientServerModel/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientServerModel/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientServerModel/Server.java" afterDir="false" />
-    </list>
-    <list id="2e06cd26-1089-443e-8b53-440a30d2ff3c" name="Other Changelist" comment="Client Server Model Operation Handled">
       <change beforePath="$PROJECT_DIR$/src/ClientServerModel/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientServerModel/Server.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -45,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ClientServerModel/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2271">
-              <caret line="127" column="9" lean-forward="true" selection-end-line="134" />
+            <state relative-caret-position="3192">
+              <caret line="86" column="22" lean-forward="true" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,21 +66,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/ClientServerModel/Client.java" />
+        <option value="$PROJECT_DIR$/src/Server.java" />
         <option value="$PROJECT_DIR$/src/ClientServerModel/Server.java" />
       </list>
     </option>
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/ClientServerModel/Server.java">
-      <ranges>
-        <range start1="5" end1="5" start2="5" end2="6" changelist="c93ea836-fb5d-4d6b-a0e1-3f48f3016417" />
-        <range start1="20" end1="21" start2="21" end2="23" changelist="c93ea836-fb5d-4d6b-a0e1-3f48f3016417" />
-        <range start1="22" end1="23" start2="24" end2="25" changelist="c93ea836-fb5d-4d6b-a0e1-3f48f3016417" />
-        <range start1="69" end1="70" start2="71" end2="72" changelist="c93ea836-fb5d-4d6b-a0e1-3f48f3016417" />
-        <range start1="71" end1="72" start2="73" end2="77" changelist="c93ea836-fb5d-4d6b-a0e1-3f48f3016417" />
-        <range start1="83" end1="84" start2="88" end2="135" changelist="2e06cd26-1089-443e-8b53-440a30d2ff3c" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="130" />
@@ -106,6 +91,24 @@
               <item name="Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Project" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientServerModel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientServerModel" type="462c0819:PsiDirectoryNode" />
+              <item name="Server.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -116,7 +119,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545287480161" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545288204306" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
@@ -171,22 +174,38 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c93ea836-fb5d-4d6b-a0e1-3f48f3016417" name="Default Changelist" comment="" />
-      <changelist id="2e06cd26-1089-443e-8b53-440a30d2ff3c" name="Other Changelist" comment="" />
+      <changelist id="" name="Other Changelist" comment="" />
       <created>1545222057244</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1545222057244</updated>
       <workItem from="1545222059725" duration="10166000" />
       <workItem from="1545246989937" duration="2514000" />
-      <workItem from="1545279386185" duration="6468000" />
+      <workItem from="1545279386185" duration="6902000" />
     </task>
+    <task id="LOCAL-00001" summary="Client Server Model Sending Receiving Messages Handled">
+      <created>1545287770507</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1545287770508</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Client Server Model Handled">
+      <created>1545287976930</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1545287976930</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19148000" />
+    <option name="totallyTimeSpent" value="19582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="130" y="35" width="3710" height="2125" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1811154" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -224,7 +243,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Client Server Model Sending Receiving Messages Handled" />
-    <option name="LAST_COMMIT_MESSAGE" value="Client Server Model Sending Receiving Messages Handled" />
+    <MESSAGE value="Client Server Model Handled" />
+    <option name="LAST_COMMIT_MESSAGE" value="Client Server Model Handled" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java" />
@@ -254,10 +274,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ClientServerModel/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2271">
-          <caret line="127" column="9" lean-forward="true" selection-end-line="134" />
+        <state relative-caret-position="3192">
+          <caret line="86" column="22" lean-forward="true" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

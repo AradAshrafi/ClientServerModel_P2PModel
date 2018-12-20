@@ -3,9 +3,6 @@ package ClientServerModel;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Scanner;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class Server {
     private static int PORT = 7654;
@@ -22,38 +19,12 @@ public class Server {
                 ClientHandler clientHandler = new ClientHandler(client);
                 clientHandler.run();
             }
-            System.t.print("done.\nClosing server ... ");
+            System.out.print("done.\nClosing server ... ");
         } catch (IOException ex) {
             System.err.println(ex);
         }
         System.out.println("done.");
     }
-
-    private static void parse_commands(String command) {
-        String[] parsedCommand = command.split(" ");
-        switch (parsedCommand[0]) {
-            case ("Add"):
-
-            case ("Subtract"):
-
-            case ("Divide"):
-
-            case ("Multiply"):
-
-            case ("Sin"):
-
-            case ("Cos"):
-
-            case ("Tan"):
-
-            case ("Cot"):
-
-
-            default:
-                System.out.println("Wrong Syntax");
-        }
-    }
-
 }
 
 
