@@ -3,6 +3,7 @@ package ClientServerModel;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -18,9 +19,10 @@ public class Server {
                 Socket client = server.accept();
                 count++;
                 System.out.println("client accepted!");
-                new ClientHandler(client).run();
+                ClientHandler clientHandler = new ClientHandler(client);
+                clientHandler.run();
             }
-            System.out.print("done.\nClosing server ... ");
+            System.t.print("done.\nClosing server ... ");
         } catch (IOException ex) {
             System.err.println(ex);
         }
@@ -67,9 +69,12 @@ class ClientHandler implements Runnable {
     public void run() {
         try {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(client.getInputStream()));
-            PrintWriter printWriter = new PrintWriter(client.getOutputStream());
+            PrintWriter printWriter = new PrintWriter(client.getOutputStream(), true);
             String command = bufferedReader.readLine();
-            System.out.println(command);
+            String result = parse_commands(command);
+
+            printWriter.println(result);
+            printWriter.flush();
 
         } catch (IOException e) {
             e.printStackTrace();
