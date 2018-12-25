@@ -6,7 +6,7 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.Scanner;
 
-public class Client extends Thread {
+public class Client {
 
     private static Scanner scanner = new Scanner(System.in);
     private static String ip = "127.0.0.1";
@@ -18,12 +18,16 @@ public class Client extends Thread {
             Socket socket = new Socket(ip, portNum);
             try {
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                PrintWriter printWriter = new PrintWriter(socket.getOutputStream());
+                PrintWriter printWriter = new PrintWriter(socket.getOutputStream(), true);
                 System.out.println("connected");
                 String command = scanner.nextLine();
                 System.out.println(command);
-                printWriter.print(command);
+                printWriter.println(command);
                 printWriter.flush();
+
+                String msg = bufferedReader.readLine();
+                System.out.println(msg);
+
             } catch (IOException e) {
                 System.out.println("Read or Write Problemً");
             }
