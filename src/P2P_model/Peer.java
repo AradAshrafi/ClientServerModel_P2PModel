@@ -97,9 +97,12 @@ public class Peer {
 
     private File search(String fileName) {
         for (File anFile : files) {
-            if (fileName.equals(anFile.getName()))
+            if (fileName.equals(anFile.getName())){
+                System.out.println("I found your file");
                 return anFile;
+            }
         }
+        System.out.println("i can find!!");
         return null;
     }
 
